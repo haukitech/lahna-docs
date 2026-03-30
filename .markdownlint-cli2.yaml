@@ -1,0 +1,14 @@
+config:
+  default: true
+  # Allow arbitrary heading levels (Docusaurus docs often start at H2)
+  MD001: false
+  # Allow inline HTML (used in MDX/Docusaurus components)
+  MD033: false
+  # Line length — not enforced, prose is hard to wrap
+  MD013: false
+
+ignores:
+  - node_modules/**
+  - build/**
+  - .docusaurus/**
+  - CLAUDE.md

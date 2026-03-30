@@ -1,0 +1,8 @@
+{
+  "label": "Resources",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Reference for all resource kinds available in Lahna, including their input parameters and output attributes."
+  }
+}
