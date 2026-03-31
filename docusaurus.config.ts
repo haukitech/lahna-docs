@@ -17,11 +17,11 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://your-lahna-docs.example.com',
-  baseUrl: '/',
+  url: 'https://haukitech.github.io',
+  baseUrl: '/lahna-docs/',
 
-  organizationName: 'hauki-tech',
-  projectName: 'lahna',
+  organizationName: 'haukitech',
+  projectName: 'lahna-docs',
 
   onBrokenLinks: 'throw',
 
