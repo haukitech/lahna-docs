@@ -60,6 +60,12 @@ sequenceDiagram
     L->>C: Store resource-b attributes
 ```
 
+## Dependency ordering
+
+Lahna automatically determines provisioning order from context references. If resource B references an attribute of resource A, Lahna provisions A before B regardless of their order in the manifest.
+
+Circular dependencies (e.g. A references B and B references A) are rejected before provisioning starts.
+
 ## Validation
 
 Lahna validates all context references when the manifest is loaded, before any provisioning begins:
@@ -68,6 +74,7 @@ Lahna validates all context references when the manifest is loaded, before any p
 - The scope must exist.
 - The `resource_id` must exist within that scope.
 - The `attribute` must be a declared output attribute of the resource kind.
+- The dependency graph must not contain cycles.
 
 This means manifest errors are caught early, not mid-provisioning.
 
